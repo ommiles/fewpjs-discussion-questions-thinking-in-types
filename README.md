@@ -135,8 +135,8 @@ Fill in the rest of the table.
 | Function                       | types of inputs                  | type of output                | function signature                                      |
 | ------------------------------ | -------------------------------- | ----------------------------- | ------------------------------------------------------- |
 | `EventTarget.addEventListener` | string, handler(e: Event): void  | void                          | addEventListener(type: string, handler: function): void |
-| `window.setTimeout`            | function                         |                               |                                                        |
-| `Array.prototype.map`          | callback function                | array                         |                                                        |
+| `window.setTimeout`            | callback function, ms, ....args  | number                        |                                                         |
+| `Array.prototype.map`          | callback function                | array                         |                                                         |
 | `Array.prototype.find`         | callback function                | any, undefined                |                                                         |
 | `Array.prototype.filter`       | callback function                | array, undefined              |                                                         |
 | `Array.prototype.reduce`       | callback function                | any, array                    |                                                         |
