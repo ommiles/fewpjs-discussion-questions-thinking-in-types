@@ -20,11 +20,11 @@ For the following functions, fill in the table with the types of the inputs and 
 
 | Function                                         | types of inputs                  | type of output                |
 | ------------------------------------------------ | -------------------------------- | ----------------------------- |
-| `function addFive(number) { return number + 5}`  |                                  |                               |
-| `function sum(A, B) { return A + B }`            |                                  |                               |
-| `function concat(A, B) { return "" + A + B }`    |                                  |                               |
-| `document.querySelector`                         |                                  |                               |
-| `window.fetch`                                   |                                  |                               |
+| `function addFive(number) { return number + 5}`  | number                           | number                        |
+| `function sum(A, B) { return A + B }`            | number                           | number                        |
+| `function concat(A, B) { return "" + A + B }`    | string                           | string                        |
+| `document.querySelector`                         | string                           | string                        |
+| `window.fetch`                                   | function                         | object                        |
 
 ### "Shapes" of `Object`s
 
@@ -77,11 +77,11 @@ Fill in the table using the 'shape' shorthand
 
 | Function      | types of inputs                  | type of output           |
 | ------------- | -------------------------------- | ------------------------ |
-| `getName`     |                                  |                          |
-| `getAge`      |                                  |                          |
-| `makePerson`  |                                  |                          |
-| `birthday`    |                                  |                          |
-| `getDistance` |                                  |                          |
+| `getName`     | object                           | string                   |
+| `getAge`      | object                           | number                   |
+| `makePerson`  | string, number                   | object                   |
+| `birthday`    | object                           | object                   |
+| `getDistance` | object                           | number                   |
 
 ### Function Signatures
 
@@ -116,13 +116,13 @@ For the following operators, fill in the types of the inputs and outputs. Follow
 | Operator   | types of inputs                  | type of output                | function signature                     |
 | ---------- | -------------------------------- | ----------------------------- | -------------------------------------- |
 | \*         | number, number                   | number                        | multiply(a: number, b: number): number |
-| + (string) |                                  |                               |                                        |
-| + (number) |                                  |                               |                                        |
-| -          |                                  |                               |                                        |
-| ^          |                                  |                               |                                        |
-| \*\*       |                                  |                               |                                        |
-| \|\|       |                                  |                               |                                        |
-| &&         |                                  |                               |                                        |
+| + (string) | string string                    | string                        |                                        |
+| + (number) | number, number                   | number                        |                                        |
+| -          | number, number                   | number                        |                                        |
+| ^          | number, number                   | number                        |                                        |
+| \*\*       | number, number                   | number                        |                                        |
+| \|\|       | boolean                          | boolean                       |                                        |
+| &&         | boolean                          | boolean                       |                                        |
 
 ### Functions that take in functions as arguments
 
@@ -135,8 +135,10 @@ Fill in the rest of the table.
 | Function                       | types of inputs                  | type of output                | function signature                                      |
 | ------------------------------ | -------------------------------- | ----------------------------- | ------------------------------------------------------- |
 | `EventTarget.addEventListener` | string, handler(e: Event): void  | void                          | addEventListener(type: string, handler: function): void |
-| `window.setTimeout`            |                                  |                               |                                                        |
-| `Array.prototype.map`          |                                  |                               |                                                        |
-| `Array.prototype.find`         |                                  |                               |                                                         |
-| `Array.prototype.filter`       |                                  |                               |                                                         |
-| `Array.prototype.reduce`       |                                  |                               |                                                         |
+| `window.setTimeout`            | function                         |                               |                                                        |
+| `Array.prototype.map`          | callback function                | array                         |                                                        |
+| `Array.prototype.find`         | callback function                | any, undefined                |                                                         |
+| `Array.prototype.filter`       | callback function                | array, undefined              |                                                         |
+| `Array.prototype.reduce`       | callback function                | any, array                    |                                                         |
+
+> handler is a function
